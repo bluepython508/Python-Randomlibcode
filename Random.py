@@ -6,7 +6,7 @@ def flipcoin():
     elif flip < 0.5:
         return("tails")
     else:
-            return("invalid")
+        return("invalid")
 
 def main():
     keyboardinput = input()
