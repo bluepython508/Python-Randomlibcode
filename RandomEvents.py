@@ -19,7 +19,7 @@ def flipcoin():
     else:
         return("The coin escaped")
 
-def roll():
+def roll(n):
     n = int(input("How many dice would you like to roll?"))
     rolled = []
     for x in range(n):
@@ -33,7 +33,8 @@ def loop():
         if keyboardinput == "flip":
             return(flipcoin())
         elif keyboardinput =="roll dice":
-            return(roll())
+            n = int(input("How many dice would you like to roll?"))
+            return(roll(n))
         elif keyboardinput == "stop":
             return("Goodbye")
         else:
