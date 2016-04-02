@@ -8,18 +8,24 @@ def flipcoin():
     else:
         return("invalid")
 
+def roll():
+    return random.randint(1, 6)
+
 def main():
     keyboardinput = input()
     if keyboardinput:
         if keyboardinput == "flip":
             return(flipcoin())
+        elif keyboardinput =="roll dice":
+            return(roll())
         elif keyboardinput == "stop":
             return("Goodbye")
 
 def welcome():
-    print("Coin Flipping Progam:")
-    print("------------------------------------------------------")
+    print("Random Event Progam:")
+    print("----------------------")
     print("Type flip to flip a coin.")
+    print("Type roll dice to roll a die")
     print("Type stop to quit the program.")
            
 
