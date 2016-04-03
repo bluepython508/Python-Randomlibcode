@@ -1,6 +1,6 @@
 import random
 import time
-prompt = ">>>"
+prompt = "READY>"
 
 def string_from_list(list_name):
     string = ''''''
@@ -20,7 +20,6 @@ def flipcoin():
         return("The coin escaped")
 
 def roll(n):
-    n = int(input("How many dice would you like to roll?"))
     rolled = []
     for x in range(n):
         rolled.append(random.randint(1,6))
