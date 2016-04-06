@@ -39,11 +39,12 @@ def loop():
             n = int(input("How many dice would you like to roll?"))
             return(roll(n))
         elif keyboardinput == "choose":
+            inputed = True
             n = 1
             strings = []
             while inputed:
                 inputed = input("string #" + str(n))
-                n ++
+                n += 1
                 strings.append(inputed)
             return(chosen(strings))
         elif keyboardinput == "stop":
@@ -60,12 +61,16 @@ def welcome():
     print("Type stop to quit the program.")
 
 def main():
-    welcome()
-    while True:
-        returned = loop()
-        print(returned)
-        if returned == "Goodbye":
-            break
+    #try:
+    if True:
+        welcome()
+        while True:
+            returned = loop()
+            print(returned)
+            if returned == "Goodbye":
+                break
+    #except:
+        #print("sorry")
            
 
 if __name__ == "__main__":
