@@ -2,6 +2,10 @@ import random
 import time
 prompt = "READY>"
 
+def chosen(strings):
+    time.sleep(5)
+    return random.choose(strings)
+
 def string_from_list(list_name):
     string = ''''''
     for x in range(len(list_name)):
@@ -34,6 +38,14 @@ def loop():
         elif keyboardinput =="roll dice":
             n = int(input("How many dice would you like to roll?"))
             return(roll(n))
+        elif keyboardinput == "choose":
+            n = 1
+            strings = []
+            while inputed:
+                inputed = input("string #" + str(n))
+                n ++
+                strings.append(inputed)
+            return(chosen(strings))
         elif keyboardinput == "stop":
             return("Goodbye")
         else:
@@ -42,8 +54,9 @@ def loop():
 def welcome():
     print("Random Event Progam:")
     print("----------------------")
-    print("Type flip to flip a coin.")
-    print("Type roll dice to roll a die")
+    print("Type flip to flip a coin")
+    print("Type roll dice to roll some die")
+    print("Type choose to choose from a list")
     print("Type stop to quit the program.")
 
 def main():
